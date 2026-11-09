@@ -1,0 +1,54 @@
+# ============================================
+# Identity Security Lab - Git Ignore Rules
+# ============================================
+
+# Environment variables and secrets
+.env
+.env.*
+secrets/
+credentials/
+private/
+
+# Certificates and private keys
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+
+# Authentication / token files
+token*
+tokens/
+auth/
+authentication.json
+
+# Tenant-specific exports and raw data
+exports/
+raw-output/
+private-output/
+tenant-data/
+
+# Local configuration containing tenant details
+config.local.json
+settings.local.json
+*.local.json
+
+# PowerShell local/session files
+*.clixml
+*.tmp
+*.temp
+
+# Logs
+*.log
+logs/
+
+# VS Code local settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
