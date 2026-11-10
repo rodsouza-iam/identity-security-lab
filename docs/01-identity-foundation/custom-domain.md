@@ -30,7 +30,13 @@ _To be documented and validated._
 
 ### 2. Domain Verification
 
-_To be documented and validated._
+After configuring the required DNS records, the custom domain was successfully verified in Microsoft Entra ID.
+
+![Verified custom domains in Microsoft Entra ID](./images/entra-custom-domains.png)
+
+The tenant currently shows `romait23.dedyn.io` with a **Verified** status.
+
+An earlier experiment using `romait23.duckdns.org` is also visible. I initially explored DuckDNS before moving to deSEC for the DNS configuration used in the later Microsoft 365 and Exchange Online integration.
 
 ### 3. DNS Configuration
 
