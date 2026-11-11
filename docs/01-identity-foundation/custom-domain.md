@@ -97,7 +97,17 @@ No separate Exchange Online mail-flow or transport configuration is documented a
 
 ### 5. User Principal Name Configuration
 
-_To be documented and validated._
+After the custom domain was verified, I configured a lab identity to use `romait23.dedyn.io` as its User Principal Name (UPN) suffix.
+
+This allowed the test identity to sign in using an identity associated with the custom domain rather than the default domain supplied with the Microsoft Demo Experiences tenant.
+
+![UPN configuration for romait23.dedyn.io](./images/entra-custom-upn.png)
+
+The test account was configured with the UPN:
+
+`admin.test@romait23.dedyn.io`
+
+This exercise also helped demonstrate the distinction between an identity's Microsoft Entra ID UPN and the email addresses associated with Microsoft 365 mail services. Although these values can be aligned, they represent different identity and messaging attributes.
 
 ## Validation
 
