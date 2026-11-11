@@ -115,8 +115,31 @@ _To be documented._
 
 ## Troubleshooting and Observations
 
-_To be documented._
+### Initial DuckDNS Experiment
+
+Before implementing the final configuration using deSEC, I experimented with `romait23.duckdns.org` as the custom domain for the lab.
+
+The DuckDNS domain could be added and successfully verified in Microsoft Entra ID, and it remains visible in the tenant as a verified custom domain.
+
+However, verification in Entra ID was only part of the objective. I also wanted the custom domain to support the Microsoft 365 mail-related configuration used by the lab identities.
+
+During this stage, I found that the DuckDNS setup did not provide the DNS configuration flexibility I needed for the required Outlook and Microsoft 365 mail-related records. Although I could use the domain for the Entra identity namespace, I could not complete the intended mail configuration for users using that domain.
+
+I therefore moved the lab domain to `romait23.dedyn.io` and used deSEC for authoritative DNS management.
+
+With deSEC, I was able to configure the required records, including:
+
+- Microsoft domain verification
+- MX
+- SPF
+- Autodiscover
+
+This allowed the same custom domain to be used across the identity and Microsoft 365 portions of the lab.
 
 ## Lessons Learned
 
-_To be documented._
+The earlier DuckDNS experiment also highlighted an important distinction between domain verification and full service integration.
+
+Successfully verifying a domain in Microsoft Entra ID proves ownership and allows the domain to participate in the identity namespace, but that does not by itself mean the DNS environment is suitable for every Microsoft 365 workload.
+
+Moving to deSEC provided the DNS control required to support both the Entra identity configuration and the additional records needed for Microsoft 365 mail services.
