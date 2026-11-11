@@ -45,7 +45,11 @@ The arrows represent configuration and service relationships rather than network
 
 ### 1. Custom Domain Registration
 
-_To be documented and validated._
+I added `romait23.dedyn.io` as a custom domain to the existing Microsoft Entra ID tenant.
+
+The objective was to use a domain under my control rather than relying exclusively on the default domain supplied with the Microsoft Demo Experiences environment.
+
+The domain was managed externally through deSEC, allowing the DNS records required for Microsoft domain verification and Microsoft 365 services to be configured directly.
 
 ### 2. Domain Verification
 
