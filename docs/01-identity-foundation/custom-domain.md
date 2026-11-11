@@ -111,7 +111,36 @@ This exercise also helped demonstrate the distinction between an identity's Micr
 
 ## Validation
 
-_To be documented._
+The custom-domain implementation was validated at multiple layers.
+
+| Test | Result |
+| --- | --- |
+| Custom domain registered in Microsoft Entra ID | Passed |
+| Domain ownership verification | Passed |
+| Microsoft 365 DNS records configured | Passed |
+| Custom UPN assigned to lab identity | Passed |
+| Outbound mail using the custom domain | Passed |
+| Inbound mail using the custom domain | Passed |
+
+### Mail Flow Validation
+
+To confirm that the custom domain was functional beyond the Microsoft Entra identity namespace, I tested bidirectional mail flow using the lab identity:
+
+`admin.test@romait23.dedyn.io`
+
+#### Outbound Mail
+
+A message sent from `admin.test@romait23.dedyn.io` was successfully delivered to another mailbox.
+
+![Outbound validation](./images/mail-validation-outbound.png)
+
+#### Inbound Mail
+
+A reply addressed to `admin.test@romait23.dedyn.io` was successfully received by the lab mailbox.
+
+![Inbound validation](./images/mail-validation-inbound.png)
+
+Together, these tests confirmed that the custom domain was successfully integrated with both the Microsoft Entra identity namespace and the Microsoft 365 mail services used by the lab.
 
 ## Troubleshooting and Observations
 
