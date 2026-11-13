@@ -10,6 +10,27 @@ Instead, I used this pre-provisioned environment as the foundation for hands-on 
 
 Throughout this repository, I distinguish between configuration that was already present in the demo environment and changes that I implemented, tested, or deliberately investigated.
 
+## Lab Identities
+
+The Microsoft Demo Experiences tenant was already populated with sample users and groups. In addition to those existing identities, I created dedicated lab identities for specific security, governance, authentication, and application-integration scenarios.
+
+| Identity | UPN | Primary purpose |
+| --- | --- | --- |
+| Admin Test | `admin.test@romait23.dedyn.io` | Administrative test identity and validation of the `romait23.dedyn.io` custom domain |
+| Emergency Access Account | `emergencyadmin@<demo-tenant>.onmicrosoft.com` | Emergency/break-glass administrative identity used in Conditional Access scenarios |
+| Google Test | `google.test@romait23.dedyn.io` | Test identity created during exploration of Google Workspace SSO integration |
+| LAB Finance Approver | `lab.finance.approver@<demo-tenant>.onmicrosoft.com` | Finance approval persona used in Identity Governance and Separation of Duties testing |
+| LAB Finance Creator | `lab.financial.creator@<demo-tenant>.onmicrosoft.com` | Finance creation persona used in Identity Governance and Separation of Duties testing |
+| LAB Helpdesk Operator | `lab.helpdesk@<demo-tenant>.onmicrosoft.com` | Helpdesk administrative persona used in RBAC and privileged-access scenarios |
+| LAB Security Reader | `lab.securityreader@<demo-tenant>.onmicrosoft.com` | Read-only security persona used in RBAC scenarios |
+| User Test | `user.test@romait23.duckdns.org` | Test identity associated with the earlier DuckDNS custom-domain experiment |
+
+These identities represent different personas within the lab rather than a single set of accounts reused for every experiment.
+
+Additional identities already present in the Microsoft Demo Experiences tenant were used where appropriate to implement or validate specific controls. Those identities are documented only within the relevant technical sections and are not included in this inventory.
+
+Detailed role assignments, access policies, authentication requirements, and governance controls are documented within their respective sections rather than in this inventory.
+
 ## Work covered in this section
 
 ### Custom Domain and Microsoft 365 Integration
@@ -27,7 +48,7 @@ Topics include:
 
 ### Identity and RBAC Foundation
 
-Creation of dedicated lab identities and groups for later security scenarios.
+Implementation of dedicated groups, administrative roles, and access models for RBAC scenarios using selected lab identities.
 
 This includes:
 
